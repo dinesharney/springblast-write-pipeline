@@ -38,11 +38,4 @@ First version uses an H2 in-memory database and exposes a REST endpoint for high
 git clone https://github.com/your-org/springblast-write-pipeline.git
 cd springblast-write-pipeline
 
-### 2. Run a Submodule
-
-Choose one of the modules and run it:
-
-```bash
-cd springblast-jpa     # or springblast-jdbc / springblast-r2dbc
-./mvnw spring-boot:run
 
