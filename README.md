@@ -32,10 +32,29 @@ First version uses an H2 in-memory database and exposes a REST endpoint for high
 
 ## Getting Started
 
+
 ### 1. Clone the Repo
 
-```bash
+
 git clone https://github.com/your-org/springblast-write-pipeline.git
 cd springblast-write-pipeline
+
+### 2. Run a Submodule
+Choose one of the modules: cd springblast-jpa or springblast-jdbc or springblast-r2dbc
+./mvn clean install
+./mvnw spring-boot:run
+
+### 2. Sample Payload
+{
+  "data": "Hello SpringBlast!"
+}
+
+### 2. Load Testing with Apache Bench (ab)
+ab -n 5000 -c 50 -p payload.json -T application/json http://localhost:8080/api/data
+
+### 2. H2 Console Access
+http://localhost:8080/h2-console
+JDBC URL: jdbc:h2:mem:testdb
+
 
 
