@@ -1,4 +1,4 @@
-# SpringBlast Write Pipeline (JPA vs JDBC vs R2DBC)
+## SpringBlast Write Pipeline (JPA vs JDBC vs R2DBC)
 
 This project demonstrates how to design high-performance **Spring Boot microservices** capable of handling **5000+ writes per second (WPS)** using three different persistence strategies:
 
