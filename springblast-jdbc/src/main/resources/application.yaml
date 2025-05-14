@@ -1,0 +1,21 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: Classic Spring Data JDBC
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+    hikari:
+      maximum-pool-size: 100
+  jdbc:
+    template:
+      fetch-size: 50
+  sql:
+    init:
+      mode: always
+  h2:
+    console:
+      enabled: true
