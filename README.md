@@ -36,9 +36,10 @@ First version uses an Postgres database and exposes a REST endpoint for high-thr
 ### 1. Clone the Repo
 
 
-git clone https://github.com/your-org/springblast-write-pipeline.git
-cd springblast-write-pipeline
-git checkout pg
+git clone https://github.com/your-org/springblast-write-pipeline.git  
+cd springblast-write-pipeline  
+git checkout pg  
+
 
 ### 2. Run a Submodule
 Choose one of the modules: cd springblast-jpa or springblast-jdbc or springblast-r2dbc
