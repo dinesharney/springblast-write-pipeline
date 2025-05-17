@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api/data")
+@RequestMapping("/api/v1")
 public class DataController {
 
     private final PayloadRepository repository;
@@ -18,7 +18,7 @@ public class DataController {
         this.repository = repository;
     }
 
-    @PostMapping
+    @PostMapping("data")
     public Mono<String> save(@RequestBody Payload payload) {
         return repository.save(payload).thenReturn("Saved");
     }
