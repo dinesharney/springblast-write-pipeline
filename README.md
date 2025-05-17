@@ -51,6 +51,10 @@ Choose one of the modules: cd springblast-jpa or springblast-jdbc or springblast
 
 ### 4. Load Testing with Apache Bench (ab)
 ab -n 5000 -c 50 -p payload.json -T application/json http://localhost:8080/api/data
+##
+or
+##
+ab -n 5000 -c 50 -p payload.json -T application/json http://<WINDOWS_IP>:8080/api/data
 
 ### 5. H2 Console Access
 http://localhost:8080/h2-console
