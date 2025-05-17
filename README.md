@@ -6,7 +6,7 @@ This project demonstrates how to design high-performance **Spring Boot microserv
 - Spring Data JDBC
 - Spring WebFlux + R2DBC
 
-First version uses an H2 in-memory database and exposes a REST endpoint for high-throughput inserts.
+First version uses an Postgres database and exposes a REST endpoint for high-throughput inserts.
 
 ---
 
@@ -38,6 +38,7 @@ First version uses an H2 in-memory database and exposes a REST endpoint for high
 
 git clone https://github.com/your-org/springblast-write-pipeline.git
 cd springblast-write-pipeline
+git checkout pg
 
 ### 2. Run a Submodule
 Choose one of the modules: cd springblast-jpa or springblast-jdbc or springblast-r2dbc
