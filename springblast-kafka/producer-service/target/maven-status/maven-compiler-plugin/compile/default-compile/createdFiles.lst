@@ -1,0 +1,3 @@
+com\example\producer\ProducerServiceApplication.class
+com\example\producer\service\KafkaProducerService.class
+com\example\producer\controller\WriteController.class

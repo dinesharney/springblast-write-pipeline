@@ -1,8 +1,10 @@
 package com.example.springblast.r2dbc.memoryinfo;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+@Slf4j
 @Component
 public class JvmMemoryLogger {
 
@@ -14,11 +16,11 @@ public class JvmMemoryLogger {
         long freeMemory = Runtime.getRuntime().freeMemory();       // Free inside current heap
         long usedMemory = totalMemory - freeMemory;
 
-        System.out.println("=== JVM Memory Info ===");
-        System.out.println("Initial Heap (Xms): " + (totalMemory / (1024 * 1024)) + " MB");
-        System.out.println("Max Heap (Xmx): " + (maxMemory / (1024 * 1024)) + " MB");
-        System.out.println("Used Heap: " + (usedMemory / (1024 * 1024)) + " MB");
-        System.out.println("Free Heap: " + (freeMemory / (1024 * 1024)) + " MB");
-        System.out.println("========================");
+        log.info("=== JVM Memory Info ===");
+        log.info("Initial Heap (Xms): " + (totalMemory / (1024 * 1024)) + " MB");
+        log.info("Max Heap (Xmx): " + (maxMemory / (1024 * 1024)) + " MB");
+        log.info("Used Heap: " + (usedMemory / (1024 * 1024)) + " MB");
+        log.info("Free Heap: " + (freeMemory / (1024 * 1024)) + " MB");
+        log.info("========================");
     }
 }

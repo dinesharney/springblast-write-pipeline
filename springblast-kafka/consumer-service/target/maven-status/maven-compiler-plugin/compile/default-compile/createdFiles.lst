@@ -1,0 +1,3 @@
+com\example\consumer\listener\WriteEventListener.class
+com\example\consumer\model\Payload.class
+com\example\consumer\repository\DataRepository.class
