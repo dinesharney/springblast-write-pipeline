@@ -58,6 +58,20 @@ Choose one of the modules: cd springblast-jpa or springblast-jdbc or springblast
   ab -n 500 -c 50 -p payload.json -T application/json http://localhost:8083/api/r2dbc/data 
   ab -n 500 -c 50 -p payload.json -T application/json http://localhost:8084/api/async/data 
 </pre>
+
+<pre> 
+ab -n 50000 -c 100 -s 100 -v 4 -p payload.json -T application/json http://localhost:8081/api/jpa/data > ab-jpa-report.txt
+ab -n 50000 -c 100 -s 100 -v 4 -p payload.json -T application/json http://localhost:8082/api/jdbc/data > ab-jdbc-report.txt
+</pre>
+<pre> 
+-n 50000	Total number of requests to perform: 50,000
+-c 100	  Concurrency level: 100 requests in parallel
+-s 100	  Socket timeout: Wait up to 100 seconds per request
+-v 4	    Verbosity level: Prints detailed request/response headers and results
+-p       payload.json	Use payload.json as the POST request body
+-T       application/json	Set Content-Type: application/json for the request
+  
+</pre>
 <pre> 
   ab -n 50000 -c 100 -p payload.json -T application/json http://localhost:8081/api/jpa/data 
   ab -n 50000 -c 100 -p payload.json -T application/json http://localhost:8082/api/jdbc/data 
