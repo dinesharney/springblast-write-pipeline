@@ -19,7 +19,7 @@ public class DataController {
 
     @PostMapping("/data")
     public String save(@RequestBody Payload payload) {
-        log.info("Inside Controller");
+        //log.info("Inside Controller");
         repository.save(payload);
         return "Saved";
     }

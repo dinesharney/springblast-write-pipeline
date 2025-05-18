@@ -22,7 +22,7 @@ public class DataController {
 
     @PostMapping("data")
     public Mono<String> save(@RequestBody Payload payload) {
-        log.info("Inside Controller");
+        //log.info("Inside Controller");
         return repository.save(payload).thenReturn("Saved");
     }
 }
