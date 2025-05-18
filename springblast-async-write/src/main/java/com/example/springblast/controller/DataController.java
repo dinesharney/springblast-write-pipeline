@@ -4,16 +4,18 @@ import com.example.springblast.entity.Payload;
 import com.example.springblast.service.BufferedWriterService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/async")
 @RequiredArgsConstructor
 public class DataController {
 
-    private final BufferedWriterService writerService;
+    @Autowired
+    BufferedWriterService writerService;
 
     @PostMapping("/data")
     public ResponseEntity<String> write(@RequestBody Payload payload) {

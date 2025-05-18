@@ -2,7 +2,9 @@ package com.example.springblast.r2dbc.controller;
 
 import com.example.springblast.r2dbc.entity.Payload;
 import com.example.springblast.r2dbc.repository.PayloadRepository;
+import com.example.springblast.r2dbc.service.WriterService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,19 +13,16 @@ import reactor.core.publisher.Mono;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/r2dbc")
 public class DataController {
 
-    private final PayloadRepository repository;
-
-    public DataController(PayloadRepository repository) {
-        this.repository = repository;
-    }
+    @Autowired
+    WriterService writerService;
 
     @PostMapping("data")
     public Mono<String> save(@RequestBody Payload payload) {
         //log.info("Inside Controller");
-        return repository.save(payload).thenReturn("Saved");
+        return writerService.write(payload).thenReturn("Saved");
     }
 }
 
