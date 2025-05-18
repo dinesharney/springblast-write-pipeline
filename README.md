@@ -53,7 +53,7 @@ Choose one of the modules: cd springblast-jpa or springblast-jdbc or springblast
 
 ### 4. Load Testing with Apache Bench (ab)
 <pre> ab -n 500 -c 50 -p payload.json -T application/json http://localhost:8080/api/v1/data </pre>
-<pre> ab -n 50000 -c 200 -p payload.json -T application/json http://localhost:8084/api/data </pre>
+<pre> ab -n 50000 -c 200 -p payload.json -T application/json http://localhost:8084/api/v1/data </pre>
 
 or (if running from WSL and app is on Windows):
 
