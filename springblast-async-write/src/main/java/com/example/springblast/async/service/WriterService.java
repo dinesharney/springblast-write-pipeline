@@ -1,7 +1,7 @@
-package com.example.springblast.service;
+package com.example.springblast.async.service;
 
-import com.example.springblast.entity.Payload;
-import com.example.springblast.repository.PayloadRepository;
+import com.example.springblast.async.entity.Payload;
+import com.example.springblast.async.repository.PayloadRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

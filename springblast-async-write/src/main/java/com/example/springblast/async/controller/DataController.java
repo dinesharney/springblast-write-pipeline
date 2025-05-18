@@ -1,7 +1,7 @@
-package com.example.springblast.controller;
+package com.example.springblast.async.controller;
 
-import com.example.springblast.entity.Payload;
-import com.example.springblast.service.BufferedWriterService;
+import com.example.springblast.async.entity.Payload;
+import com.example.springblast.async.service.BufferedWriterService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

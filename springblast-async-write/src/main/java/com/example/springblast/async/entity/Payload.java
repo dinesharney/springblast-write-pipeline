@@ -1,4 +1,4 @@
-package com.example.springblast.entity;
+package com.example.springblast.async.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -11,6 +11,7 @@ public class Payload {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(columnDefinition = "VARCHAR")
     private String data;
 
     private Instant createdAt = Instant.now();

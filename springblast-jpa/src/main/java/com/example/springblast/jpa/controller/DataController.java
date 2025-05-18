@@ -1,13 +1,10 @@
-package com.example.springblast.controller;
+package com.example.springblast.jpa.controller;
 
-import com.example.springblast.entity.Payload;
-import com.example.springblast.repository.PayloadRepository;
-import com.example.springblast.service.WriterService;
+import com.example.springblast.jpa.entity.Payload;
+import com.example.springblast.jpa.service.WriterService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.io.Writer;
 
 @Slf4j
 @RestController

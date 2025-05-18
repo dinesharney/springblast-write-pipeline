@@ -1,8 +1,7 @@
-package com.example.springblast.service;
+package com.example.springblast.async.service;
 
-import com.example.springblast.entity.Payload;
-import com.example.springblast.repository.PayloadRepository;
-import jakarta.annotation.PostConstruct;
+import com.example.springblast.async.entity.Payload;
+import com.example.springblast.async.repository.PayloadRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;

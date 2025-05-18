@@ -1,7 +1,7 @@
-package com.example.springblast.service;
+package com.example.springblast.jpa.service;
 
-import com.example.springblast.entity.Payload;
-import com.example.springblast.repository.PayloadRepository;
+import com.example.springblast.jpa.entity.Payload;
+import com.example.springblast.jpa.repository.PayloadRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
