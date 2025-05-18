@@ -6,7 +6,7 @@ This project demonstrates how to design high-performance **Spring Boot microserv
 - Spring Data JDBC
 - Spring WebFlux + R2DBC
 
-First version uses an H2 in-memory database and exposes a REST endpoint for high-throughput inserts.
+First version uses an Postgres database and exposes a REST endpoint for high-throughput inserts.
 
 ---
 
@@ -36,8 +36,10 @@ First version uses an H2 in-memory database and exposes a REST endpoint for high
 ### 1. Clone the Repo
 
 
-git clone https://github.com/your-org/springblast-write-pipeline.git
-cd springblast-write-pipeline
+git clone https://github.com/your-org/springblast-write-pipeline.git  
+cd springblast-write-pipeline  
+git checkout pg  
+
 
 ### 2. Run a Submodule
 Choose one of the modules: cd springblast-jpa or springblast-jdbc or springblast-r2dbc
@@ -50,11 +52,11 @@ Choose one of the modules: cd springblast-jpa or springblast-jdbc or springblast
 }
 
 ### 4. Load Testing with Apache Bench (ab)
-ab -n 5000 -c 50 -p payload.json -T application/json http://localhost:8080/api/data
-##
-or
-##
-ab -n 5000 -c 50 -p payload.json -T application/json http://<WINDOWS_IP>:8080/api/data
+<pre> ab -n 500 -c 50 -p payload.json -T application/json http://localhost:8080/api/v1/data </pre>
+or (if running from WSL and app is on Windows):
+
+<pre> ab -n 500 -c 50 -p payload.json -T application/json http://&lt;WINDOWS_IP&gt;:8080/api/v1/data </pre> 
+
 
 ### 5. H2 Console Access
 http://localhost:8080/h2-console
