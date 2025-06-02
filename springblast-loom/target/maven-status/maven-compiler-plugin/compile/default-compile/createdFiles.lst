@@ -1,0 +1,6 @@
+com\example\loom\repository\PayloadRepository.class
+com\example\loom\entity\Payload.class
+com\example\loom\controller\PingController.class
+com\example\loom\LoomApplication.class
+com\example\loom\controller\DataController.class
+com\example\loom\memoryinfo\JvmMemoryLogger.class

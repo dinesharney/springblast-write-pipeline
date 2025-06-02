@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS PAYLOAD;
+
+CREATE TABLE IF NOT EXISTS payload (
+    id SERIAL PRIMARY KEY,
+    data TEXT,
+    created_at TIMESTAMP
+);
